@@ -1,0 +1,12 @@
+version: "3"
+services:
+  vite-app:
+    stdin_open: true
+    tty: true
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/app/src
+    env_file:
+      - ./.env
